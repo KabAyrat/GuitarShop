@@ -1,0 +1,26 @@
+{
+  "name": "guitarshop",
+  "version": "1.0.0",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KabAyrat/GuitarShop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KabAyrat/GuitarShop/issues"
+  },
+  "homepage": "https://github.com/KabAyrat/GuitarShop#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
