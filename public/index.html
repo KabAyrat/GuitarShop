@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Музыкальный магазин - Каталог гитар</title>
+<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Каталог товаров</h1>
-    <div id="product-list"></div>
-    <script src="scripts/script.js"></script>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Музыкальный магазин</h1>
+            <p>Лучшие гитары для настоящих музыкантов</p>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToCatalog()"></div>
+    </section>
+    <section class="catalog-section" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Каталог гитар</h2>
+            <div class="filters-container">
+                <div class="filters-row">
+                    <div class="filter-group">
+                        <label for="sort-select">Сортировка:</label>
+                        <select id="sort-select">
+                            <option value="name">По названию</option>
+                            <option value="price-low">Цена: по возрастанию</option>
+                            <option value="price-high">Цена: по убыванию</option>
+                            <option value="brand">По бренду</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="type-filter">Тип гитары:</label>
+                        <select id="type-filter">
+                            <option value="">Все типы</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="brand-filter">Бренд:</label>
+                        <select id="brand-filter">
+                            <option value="">Все бренды</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="price-min">Цена от:</label>
+                        <input type="number" id="price-min" placeholder="0">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="price-max">Цена до:</label>
+                        <input type="number" id="price-max" placeholder="999999">
+                    </div>
+                    
+                    <button class="reset-btn" onclick="resetFilters()">Сбросить</button>
+                </div>
+            </div>
+            <div id="product-list">
+                <div class="loading">Загрузка товаров...</div>
+            </div>
+        </div>
+    </section>
+
+<script src="scripts/script.js"></script>
 </body>
 </html>
